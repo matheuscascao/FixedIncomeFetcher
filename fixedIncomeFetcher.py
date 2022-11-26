@@ -7,21 +7,23 @@ if __name__ == "__main__":
 
     assets = functions.filterAssetsByTime(jsonProducts)
 
-    assets3m = assets['3m']
-    assets6m = assets['6m']
-    assets12m = assets['12m']
+    out = functions.printaHTML(assets, 3, "pos") + functions.printaHTML(assets, 6, "pos") + functions.printaHTML(assets, 12, "pos") #itens to be exported into the html
 
-    print("\n\n3 MESES:")
-    for i in range(len(assets3m)):
-        item = functions.returnObjectAsset(assets3m[i])
-        print(f'\n{item}')
+    text = f'''
+        <!doctype html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <link rel="stylesheet" href="style.css">
+            <title>Renda Fixa</title>
+        </head>
+        <body>
+        <h1 id="mainH1">Lista de Ativos de Renda Fixa - BTG</h1>
+            {out}
+        </body>
+        </html>
+        ''' #HTML placeholder
 
-    print("\n\n6 MESES:")
-    for i in range(len(assets6m)):
-        item = functions.returnObjectAsset(assets6m[i])
-        print(f'\n{item}')
-
-    print("\n\n12 MESES:")
-    for i in range(len(assets12m)):
-        item = functions.returnObjectAsset(assets12m[i])
-        print(f'\n{item}')
+    file = open("sample.html", "w")
+    file.write(text)
+    file.close()

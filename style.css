@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#mainH1 {
+  display:flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #195ab4;
+  color:white;
+  padding: 15px;
+}
+
+.sectionTitulos{
+  background-color: white;
+  display: flex;
+  padding: 10px 10px 15px 5px;
+  margin-top: 50px;
+
+  width: 90%;
+  margin: 1% 5%;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.header{
+  text-align: center;
+  width: 90%;
+
+}
+
+.headerH2 {
+  flex: 100%;
+  width: 100%;
+
+  font-size: 50px;
+  font-weight: 900;
+}
+
+.descricao{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  margin-top: 10px;
+  border-radius: 10px 10px 0px 0px;
+  background: #195ab4;
+}
+
+.descricao_elemento {
+  flex: 1;
+  padding: 20px 50px;
+  font-size: 10px;
+  font-weight: 600;
+  color: white;
+}
+
+.produto {
+  flex: 3;
+}
+
+.item{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+
+  font-size: 10px;
+  font-weight: 300;
+}
+
+.item_elemento {
+  flex: 1;
+  background: #f2f2f2;
+  padding: 15px 0px;
+  font-size: 8px;
+}
