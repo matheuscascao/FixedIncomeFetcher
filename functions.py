@@ -72,13 +72,13 @@ def returnObjectAsset(asset, taxaCap="pos"):
     apMinima = asset['minAplicationValue']
     vencimento = converDate(asset['applicationDeadline'])
 
-    produto = f'{tipoProduto} - {tipoInv}\n{emissor}'
-
     if taxaCap == "pre":
         taxaEq = f'{asset[taxa]}% a.a.'
+
     else:
         taxaEq = f'{asset[taxa]}% do CDI'
 
+    produto = f'{tipoProduto} - {tipoInv} - {emissor}'
 
     infos = {
         'produto': produto,
@@ -130,7 +130,7 @@ def printaHTML(assets, vencimento, taxaCap="pos"): #generates and "item" with ht
           <h3 class="descricao_elemento">Vencimento</h3>
           <h3 class="descricao_elemento">Taxa EQ. CDB </h3>
           <h3 class="descricao_elemento">Juros</h3>
-          <h3 class="descricao_elemento">Aplicação Mínima</h3>
+          <h3 class="descricao_elemento">Aplica&#231;&atilde;o M&iacute;nima</h3>
         </div>
 
         {itens}    
